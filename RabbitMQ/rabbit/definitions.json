@@ -1,0 +1,37 @@
+{
+  "rabbit_version": "3.11.8",
+ "users": [
+    {
+      "name": "admin",
+      "password_hash": "5/H9u7QY6S05iW7AlpNAkWTls7pRxj4C4BjJ8JgE/gId68kR",
+      "hashing_algorithm": "rabbit_password_hashing_sha256",
+      "tags": [
+        "administrator"
+      ],
+      "limits": {}
+    }
+  ],
+  "permissions": [
+    {
+      "user": "admin",
+      "vhost": "/",
+      "configure": ".*",
+      "write": ".*",
+      "read": ".*"
+    }
+  ],
+  "vhosts": [
+    {
+      "name": "\/"
+    }
+  ],
+  "queues": [
+    {
+      "name": "projekt",
+      "vhost": "/",
+      "durable": true,
+      "auto_delete": false,
+      "arguments": {}
+    }
+  ]
+}

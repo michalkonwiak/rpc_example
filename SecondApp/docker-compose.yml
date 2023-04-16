@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  one-app:
+    container_name: 'second-app'
+    build: ./
+    restart: always
+    volumes:
+      - ./:/usr/src/app
+    command: python ./rpc_client.py
+    networks:
+      - test_network
+
+
+networks:
+  test_network:
+    name: test_network
+
